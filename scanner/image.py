@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 from scanner.utils import reorder
-import os
 import tensorflow as tf
 import tensorflow_hub as hub
 from PIL import Image
@@ -79,7 +78,7 @@ def getContours(img):
     return biggest
 
 
-def getImgDoc(img, contour_approx, size):
+def getImgDoc(img, contour_approx, size=(360, 480)):
     '''
 
     :param img: image
